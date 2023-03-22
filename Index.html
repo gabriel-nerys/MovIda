@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Media Distancia</title>
+</head>
+<body>
+    <section class="forme-container">
+        <div class="container">
+            <form action="">
+                <h1>MovIda</h1>
+                <p>Preencha o formulario abaixo</p>
+                <div class="input-single">
+                    <input type="number" name="" id="valor1" class="input" autocomplete="off" required>
+                    <label for="label-valo-1">Distância em KM </label>
+                </div>
+                <div class="input-single">
+                    <input type="number" name="" id="valor2" class="input" autocomplete="off" required>
+                    <label for="label-valo-1">Média KM/L </label>
+                </div>
+                <div id="combustivel">
+                    <label for="gasolina"> Gasolina </label><input type="radio" name="combustivel" id="gasolina" value="gasolina" />
+                    <label for="alcool"> Alcool</label> <input type="radio" name="combustivel" id="alcool" value="alcool"/>
+                    
+                </div>
+                <div class="btn"><input class="btn-calcular" type="submit" onclick="calculoKM ()" value="Calcular"></div>
+                <div class="resposta">
+                    
+                        <ion-icon name="car-sport-outline"></ion-icon>
+                        <p id="qtdlitros">-</p>
+                    
+                    
+                        <ion-icon name="cash-outline"></ion-icon>
+                        <p id="valortotal">-</p>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function calculoKM(){
+            let valcombust = 5;
+            
+
+            let distanciakm = parseFloat(document.getElementById("valor1").value);
+            let mediakmlitro = parseFloat(document.getElementById("valor2").value);
+
+            var num = document.querySelector('input[name="combustivel"]:checked').value;
+
+            let totallitros = distanciakm/mediakmlitro;
+            let valgas = totallitros * valcombust;
+
+            event.preventDefault();
+            document.getElementById("qtdlitros").innerText = totallitros;
+            document.getElementById("valortotal").innerText = valgas;
+            //document.write("Você vai precisar de " + totallitros + "L de gasolina. Totalizando " + valgas + "R$.")
+        }
+    </script>
+    </script> 
+
+    <script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
+    <script  nomodule  src = "https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

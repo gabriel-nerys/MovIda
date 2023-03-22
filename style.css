@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(fundo-pentagonal.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forme-container{
+    width: 340px;
+}
+
+.container{
+    max-width: 1880px;
+    margin: 0 auto;
+    padding: 0 4%s;
+}
+
+form{
+    background-color: #fff;
+    max-width: 800px;
+    height: 450px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+form h1{
+    text-align: center;
+    font-size: 30px;
+    color: #2d5966;
+}
+
+form p{
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.input-single{
+    position: relative;
+    margin: 30px 0;
+
+}
+
+ .input-single label{
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.2;
+    cursor: text;
+ }
+
+ .input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #ccc;
+    padding: 5px;
+    font-size: 17px;
+    outline: 0;
+ }
+
+ form .input-single .input:focus ~ label,
+ form .input-single .input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #2d5966;
+ }
+
+ .btn{
+    width: 100%;
+    align-content: center;  
+    display: flex;  
+    margin-top: 30px;
+    
+}
+
+ .btn-calcular{
+    color: #2ecc71;
+    background: transparent;
+    border: solid 1px #2ecc71;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 150px;
+    font-weight: bold;
+    margin-left: 55px;
+ }
+ .btn-calcular:hover{
+    background-color: #101019;
+    color: #fff;
+    transition: 0.5s;
+}
+
+ form input[type=submit]{
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #2d5966;
+    color: #fff;
+    cursor: pointer;
+ }
+
+ .resposta{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    
+    height: 30px;
+    margin-top: 25px;
+    
+ }
+
+ .resposta ion-icon{
+    font-size: 22px;
+    padding: 0px;
+     
+ }
+
+ .resposta  #qtdlitros{
+    font-size: 18px;
+    margin-right: 40px;
+    margin-left: 5px;
+ }
+
+ .resposta  #valortotal{
+    font-size: 18px;
+    margin-left: 5px;
+ }
